@@ -3,13 +3,11 @@
 using namespace std;
 
 int adiff(int A , int B){
-    while(A >= 360)
-        A -= 360;
-    while(A < 0)
+    A %= 360;
+    B %= 360;
+    if(A < 0)
         A += 360;
-    while(B >= 360)
-        B -= 360;
-    while(B < 0)
+    if(B < 0)
         B += 360;
     int diff;
     if(A > B)
